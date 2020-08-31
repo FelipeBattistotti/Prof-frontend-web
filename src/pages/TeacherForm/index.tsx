@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react';
+import {useHistory} from 'react-router-dom';
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input'
 import Textarea from '../../components/Textarea'
@@ -44,8 +45,13 @@ function TeacherForm() {
     function handleCreateClass(e: FormEvent) {
         e.preventDefault();
 
+        let emailAux = 'felipe.battistotti@gmail.com'; // fixo
+        let pwdAux = 'fe21ta'; // fixo
+
         api.post('classes', {
             name,
+            email: emailAux,
+            pwd: pwdAux,
             avatar,
             whatsapp,
             bio,
