@@ -4,7 +4,19 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
 
-function TeacherItem() {
+interface TeacherItemProps {
+    teacher: {
+        id: string;
+        name: string;
+        avatar: string;
+        bio: string;
+        cost: number;
+        subject: string;
+        whatsapp: string;
+    };
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = () => {
     return (
         <article className="teacher-item">
             <header>
