@@ -22,7 +22,7 @@ interface TeacherItemProps {
 const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
     function createNewConnection() {
         api.post('connection', {
-            user_id: teacher.id[1],
+            user_id: teacher.id,
         });
     }
 
