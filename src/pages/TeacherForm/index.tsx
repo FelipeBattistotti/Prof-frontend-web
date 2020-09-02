@@ -1,5 +1,7 @@
 import React, { useState, FormEvent } from 'react';
 import {useHistory} from 'react-router-dom';
+import { useToasts } from 'react-toast-notifications';
+
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input'
 import Textarea from '../../components/Textarea'
@@ -12,6 +14,7 @@ import './styles.css';
 
 function TeacherForm() {
     const history = useHistory();
+    const { addToast } = useToasts();
 
     const [name, setName] = useState('');
     const [avatar, setAvatar] = useState('');
@@ -61,11 +64,11 @@ function TeacherForm() {
             cost: Number(cost),
             schedule: scheduleItems
         }).then(() => {
-            alert('Cadastro realizado com sucesso!');
+            addToast('Cadastro realizado com sucesso!', { appearance: 'success' });
 
             history.push('/');
         }).catch(() => {
-            alert('Erro no cadastro!');
+            addToast('Erro no cadastro!', { appearance: 'error' });
         });
     }
 
