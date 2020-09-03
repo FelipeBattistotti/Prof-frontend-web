@@ -50,8 +50,8 @@ function TeacherForm() {
     function handleCreateClass(e: FormEvent) {
         e.preventDefault();
 
-        let emailAux = 'felipe.battistotti@gmail.com'; // fixo
-        let pwdAux = 'fe21ta'; // fixo
+        let emailAux = '';
+        let pwdAux = '';
 
         api.post('classes', {
             name,
