@@ -68,6 +68,7 @@ function TeacherList() {
                     <Input
                         name="time"
                         label="Hora"
+                        labelComplement=""
                         type="time"
                         value={time}
                         onChange={(e) => { setTime(e.target.value) }}

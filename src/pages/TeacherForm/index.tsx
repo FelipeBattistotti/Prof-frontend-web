@@ -86,18 +86,21 @@ function TeacherForm() {
                         <Input
                             name="name"
                             label="Nome Completo"
+                            labelComplement=""
                             value={name}
                             onChange={(e) => { setName(e.target.value) }}
                         />
                         <Input
                             name="avatar"
-                            label="Avatar"
+                            label="Link da sua Foto"
+                            labelComplement="  (comece com https://)"
                             value={avatar}
                             onChange={(e) => { setAvatar(e.target.value) }}
                         />
                         <Input
                             name="whatsapp"
                             label="WhatsApp"
+                            labelComplement=""
                             value={whatsapp}
                             onChange={(e) => { setWhatsapp(e.target.value) }}
                         />
@@ -132,6 +135,7 @@ function TeacherForm() {
                         <Input
                             name="cost"
                             label="Custo da sua hora por aula"
+                            labelComplement=""
                             value={cost}
                             onChange={(e) => { setCost(e.target.value) }}
                             type="number"
@@ -167,6 +171,7 @@ function TeacherForm() {
                                     <Input
                                         name="from"
                                         label="Das"
+                                        labelComplement=""
                                         type="time"
                                         value={scheduleItem.from}
                                         onChange={e => setScheduleItemValue(index, 'from', e.target.value)}
@@ -174,6 +179,7 @@ function TeacherForm() {
                                     <Input
                                         name="to"
                                         label="Até"
+                                        labelComplement=""
                                         type="time"
                                         value={scheduleItem.to}
                                         onChange={e => setScheduleItemValue(index, 'to', e.target.value)}
